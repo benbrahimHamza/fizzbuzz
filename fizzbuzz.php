@@ -13,13 +13,17 @@
     print("Counting to $maxNumber !\n");
 
     for ($i = 1; $i <= $maxNumber; $i++) {
-        if ($i % 5 == 0 && $i % 3 == 0) {
+        if (0 === $i % 15) {
             print("FizzBuzz \n");
-        } elseif ($i % 3 == 0) {
-            print("Fizz \n");
-        } elseif ($i % 5 == 0) {
-            print("Buzz \n");
-        } else {
-            print("$i \n");
+            continue;
         }
+        if (0 === $i % 3) {
+            print("Fizz \n");
+            continue;
+        }
+        if (0 === $i % 5) {
+            print("Buzz \n");
+            continue;
+        }
+        print("$i \n");
     }
